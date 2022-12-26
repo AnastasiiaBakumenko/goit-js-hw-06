@@ -1,5 +1,5 @@
 const form = document.querySelector('.login-form');
-const formInput = document.querySelector('.login-form input')
+
 
 form.addEventListener('submit', onFormSubmit);
 
@@ -12,8 +12,9 @@ const {
     if(email.value === "" || password.value === ""){
         return alert("Введіть всі дані");
     }
-    console.log(email.name, email.value);
-    console.log(password.name, password.value);
+    const user={Email : email.value,  Password : password.value};
+    console.log(user);
+    
     event.currentTarget.reset();
 }
 
